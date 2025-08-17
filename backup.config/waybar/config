@@ -1,0 +1,159 @@
+// _____________________________________________________________________________________________________________________________________________________________________________________________________
+
+// 1st monitor
+
+[{
+    // "layer": "top", // Waybar at top layer
+	"output": "DP-1",
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 3440, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces",],
+//    "modules-center": ["cpu", "temperature", "custom/gpu-usage", "temperature#temp2", "memory"],
+    "modules-center": ["cpu", "temperature", "memory"],
+	"modules-right": ["disk#disk1", "disk#disk2", "disk#disk3", "pulseaudio", "clock"],
+
+    "cpu": {
+		"interval": 1,
+        "format": "<span color='#ff0000'>[</span>CPU {usage}% <span color='#ff0000'>@</span>",
+        "tooltip": false
+    },
+
+    "temperature": {
+		"interval": 1,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",		// cpu temp
+        "format": "{temperatureC}°C<span color='#ff0000'>]</span>",
+		"tooltip": false
+    },
+
+//	"custom/gpu-usage": {
+//		"interval": 1,
+//		"exec": "cat /sys/class/drm/card0/device/gpu_busy_percent",
+//		"format": "<span color='#ff0000'>[</span>GPU {}% <span color='#ff0000'>@ </span>",
+//  		"return-type": "",
+//		"tooltip": false,
+//	},
+//	"temperature#temp2": {
+//		"interval": 1,
+//		"hwmon-path": "/sys/class/drm/card0/device/hwmon/hwmon9/temp2_input",		// gpu temp
+//		"format": "{temperatureC}°C<span color='#ff0000'>]</span>",
+//		"tooltip": false
+//	},
+
+    "memory": {
+		"interval":1,
+        "format": "<span color='#ff0000'>[</span>RAM {percentage}%<span color='#ff0000'>]</span>",
+		"tooltip": false
+    },
+
+	"disk#disk1": {
+    "interval": 1,
+    "format": "<span color='#ff0000'>[</span>NVME0 {free}<span color='#ff0000'>]</span>",
+    "path": "/",
+	"tooltip": false
+	},
+
+	"disk#disk2": {
+    "interval": 1,
+    "format": "<span color='#ff0000'>[</span>NVME1 {free}<span color='#ff0000'>]</span>",
+    "path": "/mnt/nvme1n1p1",
+	"tooltip": false
+	},
+
+	"disk#disk3": {
+    "interval": 1,
+    "format": "<span color='#ff0000'>[</span>NVME1 {free}<span color='#ff0000'>]</span>",
+    "path": "/mnt/fast",
+	"tooltip": false
+	},
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "<span color='#ff0000'>[</span>VOL {volume}%<span color='#ff0000'>]</span>{format_source}",
+        "format-muted": "<span color='#ff0000'>[</span>AUDIO MUTED<span color='#ff0000'>]</span>{format_source}",
+        "format-source": "<span color='#ff0000'>[</span>MIC {volume}%<span color='#ff0000'>]</span>",
+        "format-source-muted": "<span color='#ff0000'>[</span>MIC MUTED<span color='#ff0000'>]</span>",
+		"tooltip": false
+    },
+
+    "clock": {
+		"interval": 1,
+        "format": "<span color='#ff0000'>[</span>TIME {:%I:%M:%S %p}<span color='#ff0000'>]</span>",
+	    "timezone": "America/Chicago",
+		"tooltip": false
+    },
+
+},
+
+// _____________________________________________________________________________________________________________________________________________________________________________________________________
+
+// 2nd monitor
+
+{
+    // "layer": "top", // Waybar at top layer
+	"output": "HDMI-A-1",
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 3440, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["hyprland/workspaces",],
+   // "modules-center": ["cpu", "temperature", "custom/gpu-usage", "temperature#temp2", "memory"],
+    "modules-center": ["cpu", "temperature", "memory"],
+	"modules-right": ["pulseaudio", "clock"],
+
+    "cpu": {
+		"interval": 1,
+        "format": "<span color='#ff0000'>[</span>CPU {usage}% <span color='#ff0000'>@</span>",
+        "tooltip": false
+    },
+
+    "temperature": {
+		"interval": 1,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",		// cpu temp
+        "format": "{temperatureC}°C<span color='#ff0000'>]</span>",
+		"tooltip": false
+    },
+
+//	"custom/gpu-usage": {
+//		"interval": 1,
+//		"exec": "cat /sys/class/drm/card0/device/gpu_busy_percent",
+//		"format": "<span color='#ff0000'>[</span>GPU {}% <span color='#ff0000'>@ </span>",
+//  		"return-type": "",
+//		"tooltip": false,
+//	},
+//	"temperature#temp2": {
+//		"interval": 1,
+//		"hwmon-path": "/sys/class/drm/card0/device/hwmon/hwmon9/temp2_input",		// gpu temp
+//		"format": "{temperatureC}°C<span color='#ff0000'>]</span>",
+//		"tooltip": false
+//	},
+
+    "memory": {
+		"interval":1,
+        "format": "<span color='#ff0000'>[</span>RAM {percentage}%<span color='#ff0000'>]</span>",
+		"tooltip": false
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "<span color='#ff0000'>[</span>VOL {volume}%<span color='#ff0000'>]</span>{format_source}",
+        "format-muted": "<span color='#ff0000'>[</span>AUDIO MUTED<span color='#ff0000'>]</span>{format_source}",
+        "format-source": "<span color='#ff0000'>[</span>MIC {volume}%<span color='#ff0000'>]</span>",
+        "format-source-muted": "<span color='#ff0000'>[</span>MIC MUTED<span color='#ff0000'>]</span>",
+		"tooltip": false
+    },
+
+    "clock": {
+		"interval": 1,
+        "format": "<span color='#ff0000'>[</span>TIME {:%I:%M:%S %p}<span color='#ff0000'>]</span>",
+	    "timezone": "America/Chicago",
+		"tooltip": false
+    },
+
+}]
+
+
+
