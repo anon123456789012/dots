@@ -40,25 +40,25 @@ TERM = "alacritty"
 
 [font]
 builtin_box_drawing = false
-size = 18.0
+size = 17.0
 
 [font.normal]
-family = "Fira Code"
+family = "Jetbrains Mono"
 style = "Regular"
 
 [font.bold]
-family = "Fira Code"
+family = "Jetbrains Mono"
 style = "Bold"
 
 [font.italic]
-family = "Terminus (TTF)"
+family = "Jetbrains Mono"
 style = "Italic"
 
 [font.bold_italic]
-family = "Terminus (TTF)"
+family = "Jetbrains Mono"
 style = "Bold Italic"
 
 [window]
 dynamic_title = false
 #history = 1000000
-opacity = 0.75
+opacity = 0.80
