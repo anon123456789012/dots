@@ -1,12 +1,10 @@
-#####################################################################################################
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.config/zsh/.zshrc"
+zstyle :compinstall filename "$HOME/.cfg/zsh/.zshrc"
 
 #----------------------------------------------------------------------------------------------------
 
@@ -23,7 +21,6 @@ export LESS="--RAW-CONTROL-CHARS"
 export MANPAGER="nvim +Man!"
 
 # add local programs to path
-#path+=($HOME/.local/bin/**/*(N/))
 path+=($HOME/.local/bin)
 path+=($HOME/.local/bin/games)
 path+=($HOME/.local/bin/games/win)
@@ -83,8 +80,7 @@ alias				neofetch="fastfetch"
 alias					 nnn="nnn -d -e -A -H"
 alias					  py="python"
 alias					 sub="pstree -C age -s $$"
-alias					 vim="nvim"
+alias					   v="nvim"
 alias					  vi="nvim"
+alias					 vim="nvim"
 alias					wget="wget2"
-
-#####################################################################################################

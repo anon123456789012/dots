@@ -22,6 +22,7 @@ foreground = "#ffffff"
 
 [cursor]
 blink_interval = 500
+blink_timeout = 0
 #thickness = 0
 unfocused_hollow = true
 

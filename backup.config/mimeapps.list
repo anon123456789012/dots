@@ -1,5 +1,6 @@
 
 [Default Applications]
+application/pdf=mupdf.desktop
 image/bmp=imv.desktop
 image/gif=imv.desktop
 image/jpeg=imv.desktop
@@ -109,3 +110,5 @@ video/3gp=mpv.desktop;
 video/3gpp2=mpv.desktop;
 video/dv=mpv.desktop;
 x-scheme-handler/discord-424004941485572097=discord-424004941485572097.desktop
+x-scheme-handler/discord-1159627283506679839=discord-1159627283506679839.desktop
+x-scheme-handler/discord=vesktop.desktop
