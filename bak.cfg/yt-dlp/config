@@ -1,0 +1,32 @@
+# force ipv4 usage ( faster for now )
+#-4
+
+# save all videos under $HOME/vid/import directory
+-o "$HOME/vid/import/%(title)s.%(ext)s"
+
+# sort order of preferred codecs (only need this because yt-dlp default prefers vp9 over av1 as of 01-28-24)
+# prioritize av01 over vp9
+#-S "res,vcodec:av01:vp9.2:vp9:h265:h264:vp8:h263:theora:other"
+# prioritize vp9 over av01, as of right now vp9 looks better at 1080p
+#-S "vcodec:vp9.2:vp9:av01:h265:h264:vp8:h263:theora:other"
+
+# save video in best av1 quality with best audio quality
+#-f bestvideo[vcodec=av1]+bestaudio
+
+# save video in best vp9 quality ( av1 is starting to be used in some videos now ), also using best audio quality
+#-f bestvideo[vcodec=vp9]+bestaudio
+
+# save video in best h264 quality with best audio quality
+#-f bestvideo[vcodec=]+bestaudio
+
+# save video in worst possible quality
+#-f worstvideo+worstaudio
+
+# disable "baked in" sponsors from a user submitted database
+#--sponsorblock-remove "all"
+
+# required for mpv livestreams
+#--extractor-arg "youtube:player_client=default,android_vr"
+
+# required for age-restricted videos
+#--cookies-from-browser "chrome"
