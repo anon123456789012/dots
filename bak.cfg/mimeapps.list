@@ -1,6 +1,7 @@
 
 [Default Applications]
 application/pdf=mupdf.desktop
+image/avif=imv.desktop
 image/bmp=imv.desktop
 image/gif=imv.desktop
 image/jpeg=imv.desktop

@@ -1,53 +1,59 @@
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename "$HOME/.cfg/zsh/.zshrc"
-
+#---------------------------------------------------------------------------------------------------
+# interactive env
 #----------------------------------------------------------------------------------------------------
 
-# environment variables
+# prompt
+PS1="%F{red}[%f%n%F{red}@%f%M%F{red}] - [%f%~%F{red}] - [%f%#%F{red}]%f > "
 
-# default editor to neovim
-export EDITOR="/usr/bin/nvim"
-export VISUAL="/usr/bin/nvim"
+# history setup
+HISTFILE="${HISTFILE:-$HOME/.cfg/zsh/.zshhst}"		# use custom history file, fallback if not set
+HISTSIZE=1000										# number of lines kept in memory
+SAVEHIST=1000										# number of lines saved to histfile
+[[ -f "$HISTFILE" ]] || : >> "$HISTFILE"			# create histfile if it doesn't exist
 
-# allow colors in less pager
-export LESS="--RAW-CONTROL-CHARS"
+# path prepends
+path=(
+  $HOME/.local/bin
+  $HOME/.local/bin/games
+  $HOME/.local/bin/games/win
+  $path
+)
 
-# change manpager from less to nvimpager
+# pager setup
+export LESS="--RAW-CONTROL-CHARS" # helps less deal with ansi color codes
 export MANPAGER="nvim +Man!"
 
-# add local programs to path
-path+=($HOME/.local/bin)
-path+=($HOME/.local/bin/games)
-path+=($HOME/.local/bin/games/win)
-export PATH
+# disable escape key timeout
+KEYTIMEOUT=0
 
-#----------------------------------------------------------------------------------------------------
-
+#---------------------------------------------------------------------------------------------------
 # terminal preferences
+#---------------------------------------------------------------------------------------------------
 
+# load advanced tab completion
 autoload -Uz compinit
 compinit
-# :nd of lines added by compinstall
 
 # show all files in directory after cding
 function chpwd() {
     emulate -L zsh
-	    ls -a --color --group-directories-first -v
+    ls -a --color --group-directories-first -v
 }
 
-# colorize output to preferences set in dircolors
-if [[ -f "$HOME/.dir_colors" ]]; then
-	eval $(dircolors -b "$HOME/.dir_colors")
-elif [[ -f "/etc/DIR_COLORS" ]]; then
-	eval $(dircolors -b "/etc/DIR_COLORS")
-else
-	eval $(dircolors)
-fi
+# colorize directories
+[[ -f "$HOME/.cfg/.dir_colors" ]] && eval "$(dircolors -b "$HOME/.cfg/.dir_colors")"
+
+# history opts
+setopt EXTENDED_HISTORY			# add timestamps to entries
+setopt HIST_IGNORE_ALL_DUPS		# ignore duplicate commands
+setopt HIST_REDUCE_BLANKS		# remove unnecessary blank lines from history
+setopt HIST_VERIFY				# show command for editing before execution during history recall when using !!, fc, or similar command (does not impact reverse/forward searches)
+setopt INC_APPEND_HISTORY		# write each command immediately to histfile
+setopt SHARE_HISTORY			# share history across multiple interactive shells
+
+#---------------------------------------------------------------------------------------------------
+# keybinds
+#---------------------------------------------------------------------------------------------------
 
 # enable vi mode
 bindkey -v
@@ -62,9 +68,9 @@ bindkey "^?" backward-delete-char
 # enables reverse-i-search in insert mode
 bindkey "^R" history-incremental-search-backward
 
-#----------------------------------------------------------------------------------------------------
-
+#---------------------------------------------------------------------------------------------------
 # aliases
+#---------------------------------------------------------------------------------------------------
 
 alias					  cp="cp -v"
 alias					curl="curl -JLOR"
@@ -75,8 +81,6 @@ alias					  rm="rm -v"
 alias					diff="colordiff"
 alias				   mupdf="mupdf-x11"
 alias					   n="nnn -d -e -A -H"
-alias					 neo="fastfetch"
-alias				neofetch="fastfetch"
 alias					 nnn="nnn -d -e -A -H"
 alias					  py="python"
 alias					 sub="pstree -C age -s $$"

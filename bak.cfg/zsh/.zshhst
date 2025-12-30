@@ -1,0 +1,158 @@
+: 1766740162:0;rm .zshhst
+: 1766740162:0;echo hi
+: 1766740162:0;nvim 'tmux.conf'
+: 1766740162:0;cd ..
+: 1766740162:0;cd zsh
+: 1766740162:0;cd .cfg/tmux
+: 1766740162:0;nvim tmux.conf
+: 1766740162:0;cat .zshrc
+: 1766740662:0;nvim .zshhst
+: 1766740686:0;neo
+: 1766788348:0;cat
+: 1766788529:0;bindkey -v
+: 1766788534:0;bindkey
+: 1766788698:0;cd .cfg/zsh
+: 1766788699:0;nvim .zshrc
+: 1766789992:0;whoami
+: 1766796745:0;traceroute google.com
+: 1766796752:0;traceroute -6 google.com
+: 1766797771:0;eix xdg-desktop-portal
+: 1766797795:0;equery u xdg-desktop-portal
+: 1766797808:0;equery u xdg-desktop-portal-hyprland
+: 1766797831:0;locate libwayland-client-so.0.24.0
+: 1766797833:0;locate libwayland-client-so.0.
+: 1766797835:0;locate libwayland-client-so.
+: 1766797836:0;locate libwayland-client-so
+: 1766797839:0;locate libwayland
+: 1766797840:0;locate libwayland-client
+: 1766797846:0;locate libwayland-client.so.0
+: 1766797849:0;locate libwayland-client.so.0.24
+: 1766797851:0;locate libwayland-client.so.0.24.0
+: 1766797856:0;file /usr/lib/libwayland-client.so.0.24.0
+: 1766797867:0;equery b/usr/lib/libwayland-client.so.0.24.0
+: 1766797870:0;equery b /usr/lib/libwayland-client.so.0.24.0
+: 1766798250:0;tmux
+: 1766798293:0;cd /var/log
+: 1766806655:0;eix libglvnd
+: 1766806660:0;cd games/win/990pro2tb1
+: 1766806666:0;cd games
+: 1766806668:0;cd quake
+: 1766806670:0;cd ironwail
+: 1766806671:0;ldd ironwail
+: 1766806703:0;killall ironwail
+: 1766806714:0;root
+: 1766806729:0;tmux kill-server
+: 1766806774:0;ls -al
+: 1766806816:0;eselect opengl list
+: 1766806976:0;eix xdg-desktop
+: 1766807308:0;gcc --version\
+ls -l /usr/lib/gcc/x86_64-pc-linux-gnu/\
+readelf -Ws /usr/lib64/libgcc_s.so.1 | head
+: 1766807318:0;gcc --version
+: 1766807323:0;eix gcc
+: 1766811606:0;cd .cach
+: 1766811607:0;cd .cache
+: 1766811626:0;cd hyprland
+: 1766811667:0;cd .local/state
+: 1766812128:0;echo VK_ICD_FILENAMES
+: 1766812131:0;echo $VK_ICD_FILENAMES
+: 1766812159:0;quake
+: 1766812174:0;echo $vblank_mode
+: 1766824625:0;unzip 'ut_goty.zip'
+: 1766824628:0;wine UT_GOTY.exe
+: 1766824658:0;wineserver -k
+: 1766824661:0;rm -rfv .wine
+: 1766824672:0;file 'UT_GOTY.exe'
+: 1766824680:0;WINEARCH=win32 wineboot
+: 1766824683:0;winecfg
+: 1766824693:0;wine 'UT_GOTY.exe'
+: 1766824807:0;cd .wine
+: 1766824840:0;WINEARCH=win32 setup_dxvk.sh install
+: 1766824849:0;file UnrealTournament
+: 1766824851:0;file UnrealTournament.exe
+: 1766824859:0;WINEARCH=win32 wine UnrealTournament.exe
+: 1766826834:0;hyprctl monitors
+: 1766826840:0;watch -n.1 hyprctl monitors
+: 1766828937:0;du -sh .wine
+: 1766828959:0;ping 1.1.1.1
+: 1766828962:0;ping google.com
+: 1766829373:0;locate libgallium
+: 1766829394:0;equery b /usr/lib64/libgallium-25.2.7.so
+: 1766829477:0;doas updatedb
+: 1766829482:0;locate locate
+: 1766829497:0;locate htop
+: 1766829504:0;eselect llvm
+: 1766829508:0;eselect gcc list
+: 1766829522:0;nvim hi.c
+: 1766829539:0;gcc hi.c
+: 1766829540:0;./a.out
+: 1766870599:0;doas reboot
+: 1766870646:0;htop
+: 1766871554:0;killall nnn
+: 1766871645:0;equery u dolphin
+: 1766871651:0;equery u games-emulation/dolphin
+: 1766871658:0;equery d dolphin
+: 1766871668:0;equery g games-emulation/dolphin
+: 1766871674:0;eix glvnd
+: 1766871678:0;equery u libglvnd
+: 1766876339:0;wine UnrealTournament.exe
+: 1766878072:0;cd .local/bin
+: 1766878074:0;nvim voipscreenshare
+: 1766878189:0;amdgpu_top --gui
+: 1766878191:0;bg
+: 1766878192:0;disown
+: 1766895367:0;nvim bioshockremastered
+: 1766896086:0;WINEPREFIX="/home/anon/wine/prefixes/.bioshockremastered" wineserver -k
+: 1766896096:0;cd .local/bin/games
+: 1766896098:0;CD WIN
+: 1766896105:0;cd win
+: 1766896446:0;cd 990pro2tb1
+: 1766897181:0;hyprctl clients
+: 1766909570:0;lsof +D /dev/shm
+: 1766909572:0;cd /dev/shm
+: 1766909572:0;rm *
+: 1766909677:0;cd tgm
+: 1766909682:0;doas htop
+: 1766909971:0;cd tmp
+: 1766909999:0;cd .local/bin/games/win
+: 1766910069:0;cd .cfg/hypr
+: 1766910072:0;nvim hyprland.conf
+: 1766910339:0;dmesg
+: 1766910559:0;cd dl
+: 1766910561:0;wget 'https://archive.org/download/GameCubeBIOSImages.7z/GameCube%20BIOS%20Images.7z/BIOS%20Images%2Fgc-ntsc-10.zip'
+: 1766910577:0;wget 'https://archive.org/download/GameCubeBIOSImages.7z/GameCube%20BIOS%20Images.7z/BIOS%20Images%2Fgc-ntsc-10.zip' -o ntsc-10.zip
+: 1766910581:0;file ntsc-10.zip
+: 1766910610:0;curl 'https://archive.org/download/GameCubeBIOSImages.7z/GameCube%20BIOS%20Images.7z/BIOS%20Images%2Fgc-ntsc-10.zip' -o ntsc-10.zip
+: 1766910616:0;file gc-ntsc-10.zip
+: 1766910645:0;man 7z
+: 1766910657:0;cd gc
+: 1766910659:0;7z x 'GameCube BIOS Images.7z'
+: 1766910666:0;ls -a
+: 1766910673:0;unzip gc-ntsc-10.zip
+: 1766910675:0;n
+: 1766914944:0;vainfo
+: 1766914954:0;man vainfo
+: 1766914957:0;vainfo --help
+: 1766914960:0;vainfo -a
+: 1766970639:0;filesharemount
+: 1766982773:0;doas poweroff
+: 1767052004:0;man man
+: 1767052006:0;cd
+: 1767054285:0;wrappedhl
+: 1767057401:0;top
+: 1767100203:0;htop
+: 1767100303:0;wrappedhl
+: 1767100375:0;nvim .zshenv
+: 1767116750:0;n
+: 1767117884:0;cd tmp
+: 1767117887:0;cd
+: 1767117888:0;cd dl
+: 1767117904:0;git clone https://github.com/anon123456789012/dots
+: 1767117905:0;cd dots
+: 1767117907:0;n
+: 1767117972:0;c d..
+: 1767117973:0;cd ..
+: 1767117976:0;rm -rfv dots
+: 1767117979:0;git clone https://github.com/anon123456789012/dots
+: 1767117981:0;cd dots
+: 1767117985:0;n

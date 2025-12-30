@@ -1,7 +1,14 @@
-# set zsh dotfiles directory in .config instead of $HOME
+#---------------------------------------------------------------------------------------------------
+# always loaded env
+#---------------------------------------------------------------------------------------------------
 
+# set custom cfg directories
 export XDG_CONFIG_HOME="$HOME/.cfg"
 export ZDOTDIR="$HOME/.cfg/zsh"
 
-# set prompt
-export PS1="%F{red}[%f%n%F{red}@%f%M%F{red}] - [%f%~%F{red}] - [%f%#%F{red}]%f > "
+#---------------------------------------------------------------------------------------------------
+# default editor for scripts and interactive shells
+#---------------------------------------------------------------------------------------------------
+
+export EDITOR="/usr/bin/nvim"
+export VISUAL="/usr/bin/nvim"

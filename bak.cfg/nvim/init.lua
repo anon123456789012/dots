@@ -23,6 +23,7 @@ vim.opt.ttimeoutlen = 0														-- disable terminal escape sequence timeout
 -- visual preferences (not referring to visual mode)
 
 require('primary')															-- set colorsheme
+vim.opt.termguicolors = true												-- force truecolor
 vim.opt.syntax = 'on'														-- enable syntax highlighting
 vim.opt.guicursor = "a:block,a:blinkon100"									-- cursor settings; 'a:block' forces block for normal mode, visual mode, cli mode, insert mode, 'a:blinkon100' forces cursor blink every 100ms
 vim.opt.statusline = "%t | %F %l:%c / %L %=%p%%"							-- status line formatting (%t = filename, %F = full path, %l = line number, %c = column number, %L = number of lines in buffer, %= = all to the right of this goes to the far right of the bar, %p = percent through file

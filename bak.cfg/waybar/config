@@ -58,14 +58,14 @@
 	"disk#disk2": {
     "interval": 1,
     "format": "<span color='#ff0000'>[</span>NVME1 {free}<span color='#ff0000'>]</span>",
-    "path": "/mnt/nvme1n1p1",
+    "path": "/mnt/nvme/990pro2tb1",
 	"tooltip": false
 	},
 
 	"disk#disk3": {
     "interval": 1,
-    "format": "<span color='#ff0000'>[</span>NVME1 {free}<span color='#ff0000'>]</span>",
-    "path": "/mnt/fast",
+    "format": "<span color='#ff0000'>[</span>NFS {free}<span color='#ff0000'>]</span>",
+    "path": "/mnt/nfs4/fileshare/",
 	"tooltip": false
 	},
 
@@ -154,6 +154,3 @@
     },
 
 }]
-
-
-
